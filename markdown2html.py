@@ -35,17 +35,23 @@ if __name__ == "__main__":
     """
     Main entry point of the script.
     """
+
+    # Check if the required number of arguments are provided (input and output
+    # files)
     if len(sys.argv) < 3:
         print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
         sys.exit(1)
 
+    # Get the input and output file names from the command-line arguments
     input_file = sys.argv[1]
     output_file = sys.argv[2]
 
+    # Check if the input file exists; if not, print an error message and exit
     if not os.path.isfile(input_file):
         print(f"Missing '{input_file}'", file=sys.stderr)
         sys.exit(1)
 
+    # Call the function to convert the Markdown file to HTML
     convert_markdown_2html(input_file, output_file)
 
     # Exit the program successfully
