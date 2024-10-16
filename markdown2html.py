@@ -19,11 +19,14 @@ def convert_markdown_2html(input_file, output_file):
     Returns:
     None
     """
+    # Read the contents of the Markdown file
     with open(input_file, 'r') as md_file:
         markdown_txt = md_file.read()
 
+    # Convert the Markdown text to HTML
     html = markdown.markdown(markdown_txt)
 
+    # Write the converted HTML to the output file
     with open(output_file, 'w') as html_file:
         html_file.write(html)
 
@@ -45,4 +48,5 @@ if __name__ == "__main__":
 
     convert_markdown_2html(input_file, output_file)
 
+    # Exit the program successfully
     sys.exit(0)
