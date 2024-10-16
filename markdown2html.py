@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Script that takes an argument 2 strings
+"""
 
 import sys
 import os
