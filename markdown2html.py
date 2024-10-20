@@ -14,7 +14,8 @@ def convert_markdown_2html(input_file, output_file):
 
     Parameters:
     input_file (str): The path to the input Markdown file.
-    output_file (str): The path to the output HTML file where the converted content will be saved.
+    output_file (str): The path to the output HTML file where
+    the converted content will be saved.
 
     Returns:
     None
@@ -36,10 +37,11 @@ if __name__ == "__main__":
     Main entry point of the script.
     """
 
-    # Check if the required number of arguments are provided (input and output
-    # files)
+    # Check if the required number of arguments are provided
+    # (input and output files)
     if len(sys.argv) < 2:
-        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        print("Usage: ./markdown2html.py README.md README.html",
+              file=sys.stderr)
         sys.exit(1)
 
     # Get the input and output file names from the command-line arguments
