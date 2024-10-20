@@ -37,11 +37,9 @@ if __name__ == "__main__":
     Main entry point of the script.
     """
 
-    # Check if the required number of arguments are provided
-    # (input and output files)
-    if len(sys.argv) < 2:
-        print("Usage: ./markdown2html.py README.md README.html",
-              file=sys.stderr)
+    # Check if exactly 2 arguments are provided (input and output files)
+    if len(sys.argv) != 3:
+        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
         sys.exit(1)
 
     # Get the input and output file names from the command-line arguments
