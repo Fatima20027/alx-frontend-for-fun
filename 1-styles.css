@@ -1,0 +1,22 @@
+
+a {
+  color: rgb(165, 42, 93);
+  text-decoration: none;
+  
+}
+
+a::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: rgb(165, 42, 93);
+  
+  width: 0;
+  transform: translateY(2.2ex);
+    transition: .5s ease-out;
+	
+}
+
+a:hover::before {
+	width: 9.5ch;
+}
